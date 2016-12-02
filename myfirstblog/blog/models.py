@@ -4,8 +4,6 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-
-
 class Category(models.Model):
     title = models.CharField(max_length = 30, unique = True, verbose_name = "Наименование категории")
     class Meta:
@@ -26,4 +24,4 @@ class Article(models.Model):
         verbose_name = "Статья"
         verbose_name_plural = "Статьи"
     def __unicode__(self):
-        return self.category
+        return self.title
